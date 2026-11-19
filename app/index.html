@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GTA VI Trophy Guide &amp; Tracker — Leonida Legends</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <h1>LEONIDA LEGENDS</h1>
+    <p class="sub">GTA VI trophy guide &amp; tracker — all 55 PlayStation 5 trophies, offline</p>
+  </div>
+  <div class="progress" aria-label="Progress">
+    <div class="bar"><div id="barfill" class="fill" style="width:0%"></div></div>
+    <p id="progress">0 of 55 earned · 0%</p>
+  </div>
+</header>
+
+<nav class="views">
+  <button id="view-checklist" class="view-btn active" type="button">Checklist</button>
+  <button id="view-roadmap" class="view-btn" type="button">Roadmap to Platinum</button>
+</nav>
+
+<div class="controls">
+  <input id="search" type="search" placeholder="Search a trophy or guide…" aria-label="Search trophies">
+  <div class="filters" id="kindfilters" role="group" aria-label="Filter by kind">
+    <button data-kind="all" class="chip active" type="button">All</button>
+    <button data-kind="story" class="chip" type="button">Story</button>
+    <button data-kind="missable" class="chip" type="button">Missable</button>
+    <button data-kind="collectibles" class="chip" type="button">Collectibles</button>
+    <button data-kind="activities" class="chip" type="button">Activities</button>
+    <button data-kind="online" class="chip" type="button">Online</button>
+  </div>
+  <label class="grade">Grade
+    <select id="grade">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="spoiler"><input id="spoiler" type="checkbox"> Spoiler-safe (hide story trophies until earned)</label>
+  <button id="export" type="button">Export progress</button>
+  <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
+</div>
+
+<main>
+  <section id="checklist-view">
+    <p id="online-note" class="note" hidden>GTA VI lists no online trophies — every trophy here is earned in single-player. The Online filter is empty by design.</p>
+    <p id="empty" class="note" hidden>No trophies match these filters.</p>
+    <div class="layout">
+      <ul id="rows" class="rows"></ul>
+      <aside id="detail" class="detail" aria-live="polite"></aside>
+    </div>
+  </section>
+  <section id="roadmap-view" hidden>
+    <p class="intro">The road to the platinum in seven stages, in order. Story first, then the stranger strands, then activities and collectibles, and the money and combat clean-up last — 100% completion and the platinum come at the end.</p>
+    <div id="stages"></div>
+  </section>
+</main>
+
+<footer>
+  <p>Guide text is written for this guide, in its own words. Trophy names and descriptions are shown as PlayStation publishes them. Sources are cited beside each guide. Works offline — nothing is fetched from the network.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
